@@ -3,7 +3,7 @@ import './App.css'
 function App() {
 
   return (
-    <div className='flex flex-col app_primary'>
+    <div className='app_primary'>
       {/* header */}
       <div className='app_header'>
 
