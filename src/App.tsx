@@ -1,4 +1,6 @@
 import './App.css'
+import { Routes, Route, Link } from 'react-router-dom'
+import { routes, navLinks } from './routes'
 
 function App() {
 
@@ -13,10 +15,20 @@ function App() {
         </div>
       </div>
 
+      {/* Navigation */}
+      <nav className='app_nav'>
+        {navLinks.map((link) => (
+          <Link key={link.path} to={link.path}>{link.label}</Link>
+        ))}
+      </nav>
+
       {/* Body */}
       <div className='app_body'>
-        <p>Your tasks goes here</p>
-
+        <Routes>
+          {routes.map((route) => (
+            <Route key={route.path} path={route.path} element={route.element} />
+          ))}
+        </Routes>
       </div>
 
       {/* Footer */}
