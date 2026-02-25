@@ -1,8 +1,7 @@
 export default function TestPlayground() {
   return (
     <div>
-      <h2>Dashboard</h2>
-      <p>This is the Dashboard page!</p>
+      <h2>Your code goes here ...</h2>
     </div>
   )
 }
