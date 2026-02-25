@@ -3,6 +3,7 @@ import { Routes, Route, Link } from 'react-router-dom'
 import { routes, navLinks } from './routes'
 import React, { useState } from 'react'
 import TasksModal from './components/TasksModal'
+import logo from './assets/logo.svg'
 
 function App() {
   const [showTasksModal, setShowTasksModal] = useState(false)
@@ -12,7 +13,7 @@ function App() {
       {/* header */}
       <div className='app_header'>
 
-        <img src='https://www.uniper.energy/themes/custom/uniper2025/logo.svg' alt='uniper'/>
+        <img src={logo} alt='uniper'/>
         <div className='header_content'>
           <h4>Test Setup</h4>
         </div>
