@@ -1,9 +1,11 @@
 import './App.css'
 import { Routes, Route, Link } from 'react-router-dom'
 import { routes, navLinks } from './routes'
-import React from 'react';
+import React, { useState } from 'react'
+import TasksModal from './components/TasksModal'
 
 function App() {
+  const [showTasksModal, setShowTasksModal] = useState(false)
 
   return (
     <div className='app_primary'>
@@ -21,6 +23,12 @@ function App() {
         {navLinks.map((link) => (
           <Link key={link.path} to={link.path}>{link.label}</Link>
         ))}
+        <button 
+          className='tasks_button'
+          onClick={() => setShowTasksModal(true)}
+        >
+          Tasks
+        </button>
       </nav>
 
       {/* Body */}
@@ -36,6 +44,9 @@ function App() {
       <div className='app_footer'>
         <p>All the best !!!</p>
       </div>
+
+      {/* Tasks Modal */}
+      <TasksModal visible={showTasksModal} onHide={() => setShowTasksModal(false)} />
     </div>
   )
 }

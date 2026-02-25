@@ -20,6 +20,7 @@ root,body{
   background-color: #f0f0f0;
   padding: 1rem;
   border-bottom: 1px solid #ddd;
+  align-items: center;
 }
 
 .app_nav a{
@@ -34,6 +35,21 @@ root,body{
   text-decoration: underline;
 }
 
+.tasks_button{
+  padding: 0.5rem 1rem;
+  background-color: #0476d9;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tasks_button:hover{
+  background-color: #035fa3;
+}
+
 @media (max-width: 768px) {
   .app_nav{
     gap: 1rem;
@@ -41,6 +57,11 @@ root,body{
   }
 
   .app_nav a{
+    font-size: 0.875rem;
+  }
+
+  .tasks_button{
+    padding: 0.4rem 0.8rem;
     font-size: 0.875rem;
   }
 }
@@ -55,6 +76,11 @@ root,body{
   .app_nav a{
     font-size: 0.75rem;
     padding: 0.5rem;
+  }
+
+  .tasks_button{
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
   }
 }
 
@@ -153,4 +179,69 @@ root,body{
   text-align: center;
   background-color: #0476d9;
   color: white;
+}
+
+/* Tasks Modal Styles */
+.tasks-modal-content {
+  padding: 1rem 0;
+}
+
+.task-dropdown-section {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.task-dropdown-label {
+  font-weight: 600;
+  color: #333;
+}
+
+.task-dropdown {
+  width: 100%;
+}
+
+.task-details {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid #e9ecef;
+}
+
+.task-details-title {
+  margin: 0 0 1rem 0;
+  color: #0476d9;
+  font-size: 1.3rem;
+}
+
+.task-description {
+  margin: 0 0 1.5rem 0;
+  color: #555;
+  line-height: 1.6;
+  background-color: #f0f7ff;
+  padding: 0.75rem;
+  border-radius: 4px;
+  border-left: 3px solid #0476d9;
+}
+
+.subtasks-title {
+  margin: 1rem 0 0.75rem 0;
+  color: #333;
+  font-size: 1rem;
+}
+
+.task-subtasks-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-subtask-item {
+  padding: 0.6rem 0.8rem;
+  margin-bottom: 0.5rem;
+  background-color: #f8f9fa;
+  border-left: 3px solid #0476d9;
+  border-radius: 3px;
+  color: #333;
+  line-height: 1.5;
 }
